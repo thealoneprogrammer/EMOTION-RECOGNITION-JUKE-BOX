@@ -1,0 +1,72 @@
+{% extends 'includes/header/header.html' %}
+{% load static %}
+{% block content %}
+    <body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <h3 class="home__heading">EMOTION RECOGNITION JUKE BOX</h3>
+                <hr/>
+                <!-- Default form login -->
+                {% if error_msg %}
+                    <div class="alert alert-danger" role="alert"><i
+                            class="fas fa-exclamation-circle" style="color: red"></i> {{ error_msg }}</div>
+                {% endif %}
+                <form class="text-center" action="{% url 'login' %}" method="POST">
+
+                    <input type="text" id="username" class="form-control mb-4" placeholder="USERNAME" name="username">
+
+                    <input type="password" id="password" class="form-control mb-4"
+                           placeholder="PASSWORD" name="password">
+
+                    <button class="btn btn-info btn-block my-4 login__button" type="submit">LOGIN <i
+                            class="fas fa-sign-in-alt"></i></button>
+                    <a href="" data-toggle="modal" data-target="#forgot-password-modal">FORGET PASSWORD?</a>
+                </form>
+                <!-- Default form login -->
+            </div>
+            <div class="col-md-7">
+                <img class="home__banner" src="{% static 'assets/images/home/WhatsApp Image 2020-09-11 at 12.15.08 AM.jpeg' %}"
+                     alt="Emotion Recognition"/>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="forgot-password-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title selection-title" id="exampleModalLabel">
+                        {% if reset_error_msg %}
+                            <div class="alert alert-danger" role="alert"><i
+                                    class="fas fa-exclamation-circle" style="color: red"></i> {{ reset_error_msg }}</div>
+                        {% endif %}
+                        {% if success_error_msg %}
+                            <div class="alert alert-danger" role="alert"> {{ success_error_msg }}</div>
+                        {% endif %}
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form action="{% url 'reset' %}" method="POST">
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <input type="text" name="reset-username" class="form-control mb-4" placeholder="USERNAME">
+    
+                            <input type="password" name="reset-password" class="form-control mb-4"
+                                placeholder="NEW PASSWORD">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary" id="reset-password" class="btn upload__btn">RESET PASSWORD</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    </body>
+    </html>
+
+{% endblock %}

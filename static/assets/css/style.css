@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+.home__banner {
+    width: 725px;
+    height: 667px;
+}
+
+input {
+    background-color: lightblue !important;
+}
+
+.home__heading {
+    color: #5474cc;
+    font-weight: bold;
+    margin: 10px;
+    text-align: center;
+    font-size: 40px;
+}
+
+.login__button {
+    background-color: #1c158c !important;
+    border-radius: 20px;
+}
+
+.login__button:hover {
+    background-color: #5474cc !important;
+}
