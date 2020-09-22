@@ -98,7 +98,6 @@ setInterval(async () => {
 ### Screenshots
 
 ![Screenshot from 2020-09-22 20-58-50](https://user-images.githubusercontent.com/38497682/93903824-c8e85a80-fd16-11ea-903f-c89be5cf13bc.png)
-![Screenshot from 2020-09-22 20-59-01](https://user-images.githubusercontent.com/38497682/93903850-cdad0e80-fd16-11ea-9a49-88f36e85ec78.png)
 ![Screenshot from 2020-09-22 20-59-04](https://user-images.githubusercontent.com/38497682/93903877-d1d92c00-fd16-11ea-8188-1754df46d938.png)
 ![Screenshot from 2020-09-22 20-59-08](https://user-images.githubusercontent.com/38497682/93903887-d43b8600-fd16-11ea-9658-1f86590c4c7c.png)
 ![Screenshot from 2020-09-22 20-59-17](https://user-images.githubusercontent.com/38497682/93903903-d7367680-fd16-11ea-92f2-afbf7b2b0137.png)
