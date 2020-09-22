@@ -34,21 +34,21 @@ Install the required dependencies start the server.
 specify the local path for static assets like songs and images as per your need and based on operating system wheverer required.
 
 Create a Superuser
-```python
+```sh
 $python manage.py createsuperuser
 ```
 this will ask you few details fill those and create a super user.
 
 Migrate the tables so as to create a sqlite database
-```python
+```sh
 $python manage.py makemigrations
 ```
-```python
+```sh
 $python manage.py migrate
 ```
 
 Start the django server by executing below command.
-```python
+```sh
 $python manage.py runserver or $ python3 manage.py runserver
 ```
 
