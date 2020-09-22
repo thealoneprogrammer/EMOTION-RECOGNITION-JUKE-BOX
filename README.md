@@ -33,8 +33,35 @@ Clone the repository
 Install the required dependencies start the server.
 specify the local path for static assets like songs and images as per your need and based on operating system wheverer required.
 
+Create a Superuser
 ```python
-$ python manage.py runserver or $ python3 manage.py runserver
+$python manage.py createsuperuser
+```
+this will ask you few details fill those and create a super user.
+
+Migrate the tables so as to create a sqlite database
+```python
+$python manage.py makemigrations
+```
+```python
+$python manage.py migrate
+```
+
+Start the django server by executing below command.
+```python
+$python manage.py runserver or $ python3 manage.py runserver
+```
+
+Navigate to 
+```sh
+127.0.0.1:8000/admin
+```
+and create a user account so as to login to the project.
+
+Verify the deployment by navigating to your server address in your preferred browser.
+
+```sh
+127.0.0.1:8000
 ```
 
 ### For detecting emotion continuously and live replace the below piece of code in scripts.js inside static/js folder.
@@ -65,10 +92,4 @@ setInterval(async () => {
     faceapi.draw.drawDetections(canvas, resizedDetections)
     faceapi.draw.drawFaceExpressions(canvas, resizedDetections)
     }, 100)
-```
-
-Verify the deployment by navigating to your server address in your preferred browser.
-
-```sh
-127.0.0.1:8000
 ```

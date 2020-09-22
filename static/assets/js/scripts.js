@@ -7,11 +7,11 @@ $(document).ready(function () {
     
         const video = document.getElementById('video')
         Promise.all([
-            faceapi.nets.tinyFaceDetector.loadFromUri('/media/alone/Seagate Backup Plus Drive/Aishwarya/static/assets/js/models'),
-            faceapi.nets.faceLandmark68Net.loadFromUri('/media/alone/Seagate Backup Plus Drive/Aishwarya/static/assets/js/models'),
-            faceapi.nets.faceRecognitionNet.loadFromUri('/media/alone/Seagate Backup Plus Drive/Aishwarya/static/assets/js/models'),
-            faceapi.nets.faceExpressionNet.loadFromUri('/media/alone/Seagate Backup Plus Drive/Aishwarya/static/assets/js/models'),
-            faceapi.nets.ageGenderNet.loadFromUri('/media/alone/Seagate Backup Plus Drive/Aishwarya/static/assets/js/models')
+            faceapi.nets.tinyFaceDetector.loadFromUri('/media/alone/Seagate Backup Plus Drive/EMOTION-RECOGNITION-JUKE-BOX/static/assets/js/models'),
+            faceapi.nets.faceLandmark68Net.loadFromUri('/media/alone/Seagate Backup Plus Drive/EMOTION-RECOGNITION-JUKE-BOX/static/assets/js/models'),
+            faceapi.nets.faceRecognitionNet.loadFromUri('/media/alone/Seagate Backup Plus Drive/EMOTION-RECOGNITION-JUKE-BOX/static/assets/js/models'),
+            faceapi.nets.faceExpressionNet.loadFromUri('/media/alone/Seagate Backup Plus Drive/EMOTION-RECOGNITION-JUKE-BOX/static/assets/js/models'),
+            faceapi.nets.ageGenderNet.loadFromUri('/media/alone/Seagate Backup Plus Drive/EMOTION-RECOGNITION-JUKE-BOX/static/assets/js/models')
         ]).then(startVideo)
 
         function startVideo() {
@@ -38,7 +38,7 @@ $(document).ready(function () {
 
                 $('.capturing__image_block').hide()
 
-                const audio = new Audio('/media/alone/Seagate Backup Plus Drive/Aishwarya/static/assets/js/songs/' + maximunProb + '/' + maximunProb + '.mp3')
+                const audio = new Audio('/media/alone/Seagate Backup Plus Drive/EMOTION-RECOGNITION-JUKE-BOX/static/assets/js/songs/' + maximunProb + '/' + maximunProb + '.mp3')
                 audio.play()
                 canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height)
                 faceapi.draw.drawDetections(canvas, resizedDetections)
@@ -100,7 +100,7 @@ $(document).ready(function () {
                 $('#view-graphs-1').show()
                 $('#stop__music_btn1').show()
 
-                const audio = new Audio('/media/alone/Seagate Backup Plus Drive/Aishwarya/static/assets/js/songs/' + result + '/' + result + '.mp3')
+                const audio = new Audio('/media/alone/Seagate Backup Plus Drive/EMOTION-RECOGNITION-JUKE-BOX/static/assets/js/songs/' + result + '/' + result + '.mp3')
                 audio.play()
             }
         })
