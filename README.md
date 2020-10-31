@@ -1,3 +1,8 @@
+
+<p align="center">
+  <img src="https://blog.iao.fraunhofer.de/images/blog/emotions.gif" />
+</p>
+
 # EMOTION RECOGNITION JUKE BOX
 
 A Respository created for emotion recognition and play music based on emotion recognized.
