@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img src="https://blog.iao.fraunhofer.de/images/blog/emotions.gif" />
+  <img src="https://blog.iao.fraunhofer.de/images/blog/emotions.gif" width="500px"/>
 </p>
 
 # EMOTION RECOGNITION JUKE BOX
